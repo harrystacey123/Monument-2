@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-.clearfix:after {
-  display: table;
-  clear: both;
-  content: "";
-}
 
 /* ==========================================================================
    Author's custom styles
@@ -26,20 +21,27 @@ body {
   color: #444;
   border-left: 6px solid #ddd;
   background: #fff;
+  
+  
 }
 
 /* Layout
    ================================================================ */
 #main {
-  float: left;
-  width: 66.66667%;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #sidebar {
-  float: right;
-  width: 29%;
+  display: flex;
+  width: 250%;
   margin-top: 108px;
   color: #888;
+  padding-left: 20px;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -48,7 +50,7 @@ body {
 }
 
 img {
-  display: block;
+  /* display: block; */
   max-width: 100%;
   margin: 10px 0;
 }
@@ -135,6 +137,7 @@ header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 /* Footer
@@ -148,7 +151,6 @@ footer {
 /* Navigation
    ================================================================ */
 header nav ul li {
-  float: left;
   width: 16.66667%;
   margin: 0;
   padding: 0;
@@ -162,6 +164,8 @@ header nav a {
   text-align: center;
   color: white;
   background: #b0b6bb;
+  display: flex;
+  justify-content: center;
 }
 
 header nav a:hover {
@@ -177,11 +181,15 @@ article {
 }
 
 article p:first-of-type:first-letter {
+  float: left;
   font-size: 108px;
   line-height: 1;
-  float: left;
   margin: -10px 10px 0 -8px;
   color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
 }
 
 hr {
@@ -202,4 +210,6 @@ hr {
 
 .ad img {
   margin: auto;
+  display: flex;
+  justify-content: flex-end;
 }
